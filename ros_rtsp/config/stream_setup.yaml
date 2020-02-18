@@ -1,0 +1,16 @@
+# Set up your streams to rtsp here.
+streams: # Cannot rename - must leave this as is.
+
+  stream-x:
+    type: cam
+    source: "v4l2src device=/dev/video0 ! videoconvert ! videoscale ! video/x-raw,framerate=10/1,width=640,height=480"
+    mountpoint: /front
+    bitrate: 500
+
+  stream-yay:
+    type: topic
+    source: /usb_cam1/image_raw
+    mountpoint: /back
+    caps: video/x-raw,framerate=10/1,width=640,height=480
+    bitrate: 500
+  
