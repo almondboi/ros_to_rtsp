@@ -54,3 +54,10 @@ Run this line in a new terminal to launch vlc and view your stream.
 The line below is default to the webcam of my laptop.
 
 > vlc --no-audio --avcodec-hw=any --sout-rtp-proto=udp --network-caching=300 --sout-udp-caching=0 --clock-jitter=0 --rtp-max-misorder=0 rtsp://0.0.0.0:8554/front :udp-timeout=0 enable-max-performance=1
+
+
+# Credits
+
+Big thanks to CircusMonkey, code is actually his. His repo is below. 
+
+https://github.com/CircusMonkey/ros_rtsp
